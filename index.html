@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Wall Tablet</title>
+  </head>
+  <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" height="10vh">
+
+      <ul class="navbar-nav">
+        <li id="listItemVVS" class="nav-item px-4" onclick="changeContentTo(0)">
+          <a class="nav-link">VVS</a>
+        </li>
+        <li id="listItemWeather" class="nav-item px-4" onclick="changeContentTo(1)">
+          <a class="nav-link">Wetter</a>
+        </li>
+        <li id="listItemCam" class="nav-item px-4" onclick="changeContentTo(2)">
+          <a class="nav-link">Kamera</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div id="contentVVS" class="container vh-100" style="display: none">
+      <iframe
+        id="contentVVS-iframe"
+        frameborder="0" marginwidth="0" marginheight="0"
+        style="border: 0;" width="100%" height="100%"
+        src="https://dfisite.vvs.de/?default_stop=de%3A08115%3A4808&time_offset=3&zoom_factor=0.8&rows=9&show_messages=1&show_position=0&lpm=400&lang=de&pk_campaign=entwicklertools&pk_kwd=abfahrtstafel">
+      </iframe>
+    </div>
+
+    <div id="contentWeather" class="container vh-100" style="display: none">
+      <iframe
+        id="contentWeather-iframe"
+        src="https://www.meteoblue.com/de/wetter/widget/three/sch%c3%b6naich_deutschland_2837093?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"
+        frameborder="0" scrolling="NO" allowtransparency="true"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+        style="width: 100%; height: 594px"></iframe>
+    </div>
+
+    <div id="contentCam" class="container vh-100" style="display: none">
+      <h1>Not Available</h1>
+    </div>
+
+
+  </body>
+</html>
